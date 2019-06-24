@@ -7,7 +7,7 @@ permalink: /faq/
 ### What is the PACIO Project?
 The PACIO project is a collaborative effort to advance interoperable health data exchange between post-acute care providers, patients, and other key stakeholders across health care, using a consensus-based use case-driven approach.
 
-The primary goal of the PACIO Project is to establish a framework for the development of a Fast Healthcare Interoperability Resource (FHIR) technical implementation guide and Reference Implementation that will facilitate health data exchange through standards-based application programming interfaces (APIs).
+The primary goal of the PACIO Project is to establish a framework for the development of post-acute care Fast Healthcare Interoperability Resource (FHIR) technical implementation guides and Reference Implementations that will facilitate health data exchange through standards-based application programming interfaces (APIs).
 
 ### What is FHIR?
 You can visit the [HL7 FHIR Overview](https://www.hl7.org/fhir/overview.html) for more information about FHIR.
