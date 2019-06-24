@@ -19,7 +19,7 @@ PACIO project information and all associated resources are open source and avail
 
 ### How do I learn more about PAC Interoperability efforts and get involved in the PACIO Project? 
 You can learn more about PAC Interoperability efforts by:
-- Reading [PACIO Project meeting materials](https://github.com/paciowg/PACIO-Project)
+- Reading the [PACIO Project charter, meeting minutes, and other materials](https://github.com/paciowg/PACIO-Project)
 - Joining the PACIO Project, by reaching out to [info@PACIOproject.org](mailto:info@pacioproject.org)
 - Emailing general questions or comments to our [discussion list](mailto:info@pacioproject.org)
 - Asking and answering questions on our Slack channel (after you [contact an administrator](mailto:team@pacioproject.org?Subject=Slack%20Access%20for%20PACIO%20Project) for access)
