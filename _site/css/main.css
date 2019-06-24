@@ -530,3 +530,7 @@ pre {
 
 .tech_logos img {
   height: 100px; }
+
+.tagline {
+  text-align: center;
+  font-size: 20px; }
