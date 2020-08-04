@@ -551,6 +551,32 @@ pre {
       .block-container-5 a {
         width: 98%; } }
 
+.block-container-6 {
+  margin: 1em 0;
+  overflow: hidden; }
+  .block-container-6 a {
+    display: inline-block;
+    width: 14%;
+    margin: 1%;
+    border: 2px solid;
+    padding: 2% 0;
+    float: left;
+    text-align: center;
+    font-size: 0.8em;
+    background: white; }
+    .block-container-6 a:hover {
+      text-decoration: none;
+      color: #54A3FD; }
+    .block-container-6 a .fa {
+      font-size: 2em;
+      margin-bottom: 3px; }
+    @media screen and (max-width: 800px) {
+      .block-container-6 a {
+        width: 45%; } }
+    @media screen and (max-width: 600px) {
+      .block-container-6 a {
+        width: 98%; } }
+
 .tech_logos li {
   display: inline-block;
   list-style: none;
