@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>PACIO</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142492397-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-142492397-1');
+        </script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index.html#page-top"><img src="assets/img/logo.png" alt="" height="80px" /> PACIO Project</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#why">Why</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#use_cases">Use Cases</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#involved">Get Involved</a></li>
+                        <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#contact">Contact Us</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main SPLASCH content -->
+        <section class="page-section bg-light">
+            <div class="container">
+                <div class="text-use-case-title">
+                    <h2 class="section-heading text-uppercase">SPLASCH</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mx-auto text-left">
+                        <p>The PACIO SPLASCH implementation guide describes a means for exchanging observations related to patients' Speech, Language, Swallowing, Cognitive Communication, and Hearing abilities across various care settings.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mx-auto text-left">
+                        <h4>Introduction</h4>
+                        <p>This project will identify the data elements regarding eating, swallowing, and functional communication that need to be captured and exchanged across transitions of care in health care settings, based on the framework for the International Classification of Functioning, Disability, and Health (ICF). Examples may include:</p>
+                            <ul>
+                                <li>Learning and applying knowledge</li>
+                                <ul>
+                                    <li>Patient is unable to read and/or comprehend/retain awareness of complex content in documents or through conversation (such as financial or medical material).</li>
+                                </ul>
+                                <li>Performing general tasks and demands</li>
+                                Patient requires assistance with simple and complex living tasks such as meal preparation and basic and/or complex activities of daily living.
+                                <li>Communicating with others</li>
+                                <ul>
+                                    <li>Patient is unable to independently communicate in high demand situations (such as an emergency phone call).</li>
+                                    <li>Patient is unable to produce intelligible words/phrases to unfamiliar listeners.</li>
+                                    <li>Patient requires excessive effort and strain to vocalize.</li>
+                                    <li>Patient requires technology for communication (i.e., hearing aids and/or speech generating devices).</li>
+                                </ul>
+                                <li>Performing self-care activities related to eating and drinking</li>
+                                <ul>
+                                    <li>Patient requires supervision, assistance, and/or diet modification with all meals related to the patient's ability to swallow independently.</li>
+                                </ul>
+                            </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mx-auto text-left">
+                        <h4>Background</h4>
+                        <p>To achieve objectives listed above, this project will:</p>
+                            <ul>
+                                <li>Develop FHIR implementation guide(s) (multiple guides may be necessary depending upon what data is identified as required and how that data should be organized for best capture and exchange)</li>
+                                <li>Develop reference implementations, as needed</li>
+                                <li>Coordinate updates of existing PACIO IGs or suggest revisions for other related IGs, as needed</li>
+                                <li>Reuse and refine existing profiles and localize and adapt other profiles for our use, as needed</li>
+                            </ul>
+                            <p>The areas of functional information referenced above is patient focused and can be collected and assessed by members of the interdisciplinary health care team, including but not limited to speech language pathologists, occupational therapists, physical therapists, physicians, nurses, social workers, case managers, or dieticians.</p>
+                            <p>The Post-Acute Care Interoperability (PACIO) community has a strong interest in the exchange of this data and will support the community engagement as needed in order to help develop a standard mechanism for EHR interoperability to improve patient care management. Many stakeholders (both clinical and technical) support PACIO, including MITRE, Centers for Medicare and Medicaid Services (CMS), Office of the National Coordinator (ONC), and over 30 representatives from the health care industry.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mx-auto text-left">
+                        <h4>Patient Story and Data Flow Diagram</h4>
+                        <img id="myImg" src="assets/img/use_case_splasch.png" style="width:100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">The PACIO Project is sponsored by the Centers for Medicare & Medicaid Services (CMS) and led by The MITRE Corporation.</div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-8 text-lg-left"> </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">Copyright © 2020 The MITRE Corporation</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                      <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/pacioproject"><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-dark btn-social mx-2" href="https://pacioproject.slack.com/"><i class="fab fa-slack"></i></a>
+                      <a class="btn btn-dark btn-social mx-2" href="https://github.com/paciowg"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-right">
+                        <a class="mr-3" href="#!">Privacy Policy</a>
+                        <a href="#!">Terms of Use</a>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">FHIR® and HL7® are registered trademarks of HL7® and is used with the permission of HL7®</div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
