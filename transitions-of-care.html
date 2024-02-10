@@ -45,41 +45,37 @@
             </div>
         </nav>
 
-        <!-- Main ADI content -->
+        <!-- Main PFE content -->
         <section class="page-section bg-light">
             <div class="container">
                 <div class="text-use-case-title">
-                    <h2 class="section-heading text-uppercase">Advance Directive Interoperability</h2>
+                    <h2 class="section-heading text-uppercase">Transitions of Care</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 mx-auto text-left">
-                        <p>The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person's goals, preferences and priorities for treatments and interventions regarding future medical care.</p>
+                        <p>The purpose of the LTPAC Transitions of Care (TOC) Implementation Guide is to provide a standards-based solution to support care transitions and coordination for LTPAC patients across all settings of care.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 mx-auto text-left">
                         <h4>Introduction</h4>
-                        <p>This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for himself or herself. Advance directives in this IG includes person-authored advance directives and personal advance care plans, and patient consent information attesting to a patient authorizing a person or persons to serve as a healthcare agent or attesting to permission granted to share advance directive information with others. It also includes practitioner-authored patient instructions (obligation and prohibitions), and practitioner-authored portable medical orders for life sustaining treatments.</p>
-                        <p>Advance directives can be categorized into three types of information. The current version of this guide addresses Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Encounter-Centric Instructions and Portable Medical Order for Life-Sustaining Treatment.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 mx-auto text-left">
-                        <h4>Advance Directive Overview</h4>
-                        <img id="myImg" src="assets/img/adi-overview.png" style="width:100%;">
+                        <p>The five traditional Post-Acute Care (PAC) settings, Hospice, Home Health, Skilled Nursing, Long Term Care Hospitals, and Inpatient Rehab facilities employ many types of clinicians, practitioners, therapists, and allied professionals who each require different information to provide the best and most efficient services to their patients. This information may include standardized assessments, patient preferences, observations, and other important data. Many of these items are valuable during a transition of care from one setting to another, including settings outside of Post Acute Care such as Acute Inpatient, Emergency Department, and Home and Community Based Organizations (HCBOs). This critical information is often not exchanged, resulting in gaps in care information during initial assessments and reassessments in new or parallel settings, and the data is never available as a specific role-based data set. This leads directly to potentially unsafe transition and coordination of care for these most vulnerable patients as well as information overload, additional documentation, errors in the patient record, incorrectly reconciled data, and a burden on families and patients to carry physical records with them during transitions.</p>
+
+                        <p>This project uses a consensus driven process among a wide variety of practicing clinicians such as physicians, nurses, Physical / Occupational / Respiratory Therapists, Speech Language Pathologists, Paramedics, and other allied providers like HCBO Professionals, Quality Measurement Experts, Administrators, and Payers to identify where essential information overlaps and build a meaningful method for exchanging it. Particular emphasis will be placed on off-the-shelf concepts and vocabulary, e.g., the <a href="https://del.cms.gov/">CMS Data Element Library</a>.</p>
+
+                        <p>
+                            <b>Goals</b>
+                            <ul>
+                                <li>Produce and implementation guide(s) supporting transition workflows paired with key clinical data for specific post-acute care disciplines to care for a patient entering a post-acute setting.</li>
+                                <li>Exclusively use existing resources and profiles.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 mx-auto text-left">
                         <h4>Background</h4>
-                        <p>Advance directive interoperability is a complex area that involves many stakeholders. The HL7 workgroup sponsor for this FHIR IG is Patient Empowerment. HL7 co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of PACIO's main goal in improving care transitions, the Post-Acute Care Interoperability (PACIO) Community has adopted this project as a critical use case. The PACIO Community has a strong interest in the topic of advance directive interoperability with FHIR and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).</p>
-                        <p>FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, end-of-life and emergency intervention preferences under certain circumstances, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 mx-auto text-left">
-                        <h4>Patient Story and Data Flow Diagram</h4>
-                        <img id="myImg" src="assets/img/use_case_adi.png" style="width:100%;">
+                        <p>The <a href="https://oncprojectracking.healthit.gov/wiki/display/TechLab360X/360X+Home">360x project</a> tackled post-acute transitions, but found gaps in the data need for providers. In parallel, market actors in the post-acute care tech space grappled with the same issue trying to create solutions but being limited by both the data itself, as well as a prescribed method to access it.</p>
                     </div>
                 </div>
             </div>

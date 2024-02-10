@@ -45,41 +45,44 @@
             </div>
         </nav>
 
-        <!-- Main ADI content -->
+        <!-- Main PFE content -->
         <section class="page-section bg-light">
             <div class="container">
                 <div class="text-use-case-title">
-                    <h2 class="section-heading text-uppercase">Advance Directive Interoperability</h2>
+                    <h2 class="section-heading text-uppercase">Standardized Medication Profile</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 mx-auto text-left">
-                        <p>The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person's goals, preferences and priorities for treatments and interventions regarding future medical care.</p>
+                        <p>The communication of health information, including medications, is critical to ensuring safe and effective transitions from one health care setting to another. Medication errors, poor communication and poor coordination between providers, along with the rising incidence of preventable adverse events and hospital readmissions, have drawn national attention to the importance of the timely transfer of medication information between post-acute care (PAC) providers, including Long-term Care Hospitals(LTCH), Inpatient Rehabilitation Facilities (IRF), Skilled Nursing Facilities (SNF), Home Health Agencies (HHA) and other settings.</p>
+
+                        <p>About 40% of patients discharged from acute care receive PAC services (McCarthy, 2021) and in 2018 Medicare fee-for-service spending on PAC expenditures was $58.6 billion (MedPAC, 2020). However, little is known about the transfer of health information, such as medications, during transitions of care, including the types of medication information transferred or the mode(s) of transfer used.</p>
+
+                        <p>As patients move through the healthcare system there is a need for a consistent, standardized approach to exchanging with other care team members and payers the medications and medication related information for the patient as they move from mode to mode during transitions of care (ToC).</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 mx-auto text-left">
                         <h4>Introduction</h4>
-                        <p>This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for himself or herself. Advance directives in this IG includes person-authored advance directives and personal advance care plans, and patient consent information attesting to a patient authorizing a person or persons to serve as a healthcare agent or attesting to permission granted to share advance directive information with others. It also includes practitioner-authored patient instructions (obligation and prohibitions), and practitioner-authored portable medical orders for life sustaining treatments.</p>
-                        <p>Advance directives can be categorized into three types of information. The current version of this guide addresses Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Encounter-Centric Instructions and Portable Medical Order for Life-Sustaining Treatment.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 mx-auto text-left">
-                        <h4>Advance Directive Overview</h4>
-                        <img id="myImg" src="assets/img/adi-overview.png" style="width:100%;">
+                        <p>The use case will:
+                            <ul>
+                                <li>Identify and define the components of an interoperable medication and medication related information exchange for clinicians, patients, payers and caregivers to use for the exchange of essential medication information during transitions of care (ToC) to and from hospitals, ambulatory, and long-term & post-acute care (LTPAC) settings.</li>
+
+                                <li>Develop a FHIR Implementation Guide focused on the US jurisdiction (may be portable to other jurisdictions but outside the scope of this project) for a Standardized Medication Profile (SMP) group of profiles. The profiles in the SMP IG will use and extend (as necessary) US Core profiles and provide mechanisms for the exchange of essential medication and medication related information. The work will also align with and use the Post-Acute Care Interoperability (PACIO) Project implementation Guides. The resulting Implementation Guide will be verified with a connectathon track prior to submission for a Standard for Trial Use (STU) ballot and publication.</li>
+                            </ul>
+                        </p>
+                        <p>Building on the work done for the Patient Medication List Guidance and PACIO projects, this implementation guide will formalize the FHIR representation.  The intent is to perform a joint ballot with NCPDP.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 mx-auto text-left">
                         <h4>Background</h4>
-                        <p>Advance directive interoperability is a complex area that involves many stakeholders. The HL7 workgroup sponsor for this FHIR IG is Patient Empowerment. HL7 co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of PACIO's main goal in improving care transitions, the Post-Acute Care Interoperability (PACIO) Community has adopted this project as a critical use case. The PACIO Community has a strong interest in the topic of advance directive interoperability with FHIR and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).</p>
-                        <p>FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, end-of-life and emergency intervention preferences under certain circumstances, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 mx-auto text-left">
-                        <h4>Patient Story and Data Flow Diagram</h4>
-                        <img id="myImg" src="assets/img/use_case_adi.png" style="width:100%;">
+                        <p>The NCPDP WG14/WG10 Standardized Medication Profile Task Group completed an analysis of data fields and transactions available in the current NCPDP SCRIPT and Specialized standards (as defined by the IMPACT Act) and documented existing data fields that meet patient and medication profile attributes and specific gaps.</p>
+
+                        <p>In September 2019, an HL7 Project Scope Statement was initiated to create a White Paper that would identify and define components of an interoperable medication profile. Harmonizing NCPDP and HL7 standards and projects related to the medication related information pertinent to Post-Acute Care gaps. Resulting in:
+                            <ul>
+                                <li><a href="https://www.ncpdp.org/NCPDP/media/pdf/WhitePaper/Standardization-Medication-Profile-White-Paper.pdf?ext=.pdf">The Joint HL7 / NCPDP Informative Document: Standardized Medication Profile, Release 1, September 2021</a></li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
