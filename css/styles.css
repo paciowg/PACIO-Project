@@ -10512,18 +10512,29 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .honeycomb-border {
-  fill:black;
+  fill: black;
   fill-rule:evenodd;
 }
 
 .honeycomb-big {
-  fill:#1084c7;
+  fill: #1084c7;
   fill-rule:evenodd;
 }
 
 .honeycomb-pfe {
-  fill:#42b3f5;
+  fill: #42b3f5;
   fill-rule:evenodd;
+}
+
+.honeycomb-published {
+  fill: #42b3f5;
+  fill-rule: evenodd;
+}
+
+.published {
+  color: #42b3f5;
+  width: 100%;
+  text-align: center;
 }
 
 .svg-col1-row1 {
