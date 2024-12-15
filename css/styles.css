@@ -9678,7 +9678,7 @@ button.bg-dark:focus {
 }
 
 .text-use-case-title {
-  white-space: nowrap !important;
+  /*white-space: nowrap !important;*/
   text-align: center;
   padding-top: 60px;
   padding-bottom: 15px;
