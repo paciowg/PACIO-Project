@@ -10071,7 +10071,7 @@ img::-moz-selection {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: #000000b8;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10102,13 +10102,37 @@ img::-moz-selection {
   color: #f2af0d;
 }
 
+/* Force transparent black background when navbar is not shrunk */
+#mainNav:not(.navbar-shrink) {
+  background-color: #000000b8 !important;
+}
+
+/* On pages without masthead, use solid black instead of transparent to avoid showing light page content through navbar */
+body:not(:has(header.masthead)) #mainNav:not(.navbar-shrink) {
+  background-color: #000000 !important;
+}
+
+/* On pages without masthead, start with shrunk size to match index page */
+@media (min-width: 992px) {
+  body:not(:has(header.masthead)) #mainNav {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  body:not(:has(header.masthead)) #mainNav .navbar-brand {
+    font-size: 1.25em !important;
+  }
+  body:not(:has(header.masthead)) #mainNav .navbar-brand img {
+    height: 2.5rem !important;
+  }
+}
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
     background-color: #000000b8;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
     font-size: 1.5em;
@@ -10135,6 +10159,10 @@ img::-moz-selection {
   }
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
+  }
+  /* Ensure navbar without shrink class has transparent black background */
+  #mainNav:not(.navbar-shrink) {
+    background-color: #000000b8 !important;
   }
 }
 header.masthead {
