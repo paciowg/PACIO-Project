@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pacioproject.org/schema/badges-public.schema.json",
+  "title": "PACIO Public Badge Registry",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "badgeId",
+      "eventId",
+      "status",
+      "recipientDisplayName",
+      "recipientType",
+      "badgeCategory",
+      "eventName",
+      "eventDateRange",
+      "verificationUrl",
+      "lastUpdated"
+    ],
+    "properties": {
+      "badgeId": {
+        "type": "string",
+        "pattern": "^PACIO-BDG-[0-9]{4}-[0-9]{4}$"
+      },
+      "eventId": {
+        "type": "string",
+        "pattern": "^20[0-9]{2}-[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "status": {
+        "type": "string",
+        "enum": ["Active", "Corrected", "Revoked", "Retired"]
+      },
+      "recipientDisplayName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "recipientType": {
+        "type": "string",
+        "enum": ["Individual", "Team", "Organization"]
+      },
+      "companyName": {
+        "type": "string"
+      },
+      "badgeCategory": {
+        "type": "string",
+        "enum": ["Observer", "Contributor", "FHIR Implementer"]
+      },
+      "eventName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "eventDateRange": {
+        "type": "string",
+        "minLength": 1
+      },
+      "keyContributors": {
+        "type": "string"
+      },
+      "supersedesBadgeId": {
+        "type": "string",
+        "pattern": "^PACIO-BDG-[0-9]{4}-[0-9]{4}$"
+      },
+      "supersededByBadgeId": {
+        "type": "string",
+        "pattern": "^PACIO-BDG-[0-9]{4}-[0-9]{4}$"
+      },
+      "verificationUrl": {
+        "type": "string",
+        "pattern": "^https://pacioproject\\.org/verification/\\?id=PACIO-BDG-[0-9]{4}-[0-9]{4}$"
+      },
+      "lastUpdated": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+      },
+      "publicNote": {
+        "type": "string"
+      }
+    }
+  }
+}

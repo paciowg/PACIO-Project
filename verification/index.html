@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9MBGSVH7W"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-D9MBGSVH7W');
+        </script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Verify PACIO Project event recognition badges by badge ID." />
+        <meta name="author" content="PACIO Project" />
+        <title>PACIO Badge Verification</title>
+        <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../assets/css/badge-verification.css?v=20260724" rel="stylesheet" />
+        <script src="../assets/js/badge-verification.js?v=20260724" defer></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top"><img src="../assets/img/logo.png" alt="" height="80px" /> PACIO Project</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#why">Why</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#news">News</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#use_cases">Use Cases</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#announcements">Announcements</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../verification/">Badge Verification</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#involved">Get Involved</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section class="page-section bg-light badge-verification-page">
+                <div class="container">
+                    <div class="text-use-case-title">
+                        <h2 class="section-heading text-uppercase">PACIO Badge Verification</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto text-left">
+                            <p>
+                                PACIO badges recognize participation and engagement in PACIO testing events.
+                                A badge confirms that the listed recipient was issued the badge category for the listed event.
+                                It does not represent certification, conformance, endorsement, production readiness, or successful completion of a specific test suite.
+                            </p>
+                            <p>
+                                Enter a badge ID below, or open a direct verification link such as
+                                <code>https://pacioproject.org/verification/?id=PACIO-BDG-2026-0001</code>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto">
+                            <form id="badge-verification-form" class="badge-lookup-form" novalidate>
+                                <div class="badge-lookup-heading">
+                                    <div>
+                                        <p class="badge-record-eyebrow">Find a Badge</p>
+                                        <h3>Verify by Badge ID</h3>
+                                    </div>
+                                </div>
+                                <label for="badge-id-input">Badge ID or Verification Link</label>
+                                <div class="badge-input-row">
+                                    <input id="badge-id-input" name="id" class="badge-id-search" type="search" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" placeholder="PACIO-BDG-2026-0002" aria-describedby="badge-id-help" />
+                                    <button class="btn btn-primary text-uppercase" type="submit">Verify</button>
+                                    <button id="badge-show-all" class="btn btn-outline-secondary text-uppercase" type="button">Show All</button>
+                                </div>
+                                <p id="badge-id-help" class="badge-form-help">Type a badge ID to filter the table. Click Verify to open the matching badge record and highlight it.</p>
+                                <div class="badge-filter-grid" aria-label="Badge registry filters">
+                                    <div>
+                                        <label for="badge-event-filter">Event</label>
+                                        <select id="badge-event-filter" class="badge-filter-control">
+                                            <option value="">All events</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="badge-year-filter">Year</label>
+                                        <select id="badge-year-filter" class="badge-filter-control">
+                                            <option value="">All years</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="badge-category-filter">Category</label>
+                                        <select id="badge-category-filter" class="badge-filter-control">
+                                            <option value="">All categories</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="badge-company-filter">Company</label>
+                                        <input id="badge-company-filter" class="badge-filter-control" type="search" autocomplete="off" spellcheck="false" placeholder="Company name" />
+                                    </div>
+                                    <div class="badge-filter-actions">
+                                        <button id="badge-clear-filters" class="btn btn-outline-secondary text-uppercase" type="button">Clear Filters</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div id="badge-status-message" class="badge-status-message" role="status" aria-live="polite"></div>
+
+                            <article id="badge-record" class="badge-record" hidden>
+                                <div class="badge-record-header">
+                                    <div>
+                                        <p class="badge-record-eyebrow">Verification Record</p>
+                                        <h3 id="badge-record-title"></h3>
+                                    </div>
+                                    <span id="badge-record-status" class="badge-status-pill"></span>
+                                </div>
+
+                                <div class="badge-record-body">
+                                    <dl class="badge-record-details">
+                                        <div>
+                                            <dt>Badge ID</dt>
+                                            <dd id="record-badge-id"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Event ID</dt>
+                                            <dd id="record-event-id"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Recipient</dt>
+                                            <dd id="record-recipient"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Company Name</dt>
+                                            <dd id="record-company"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Recipient Type</dt>
+                                            <dd id="record-recipient-type"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Badge Category</dt>
+                                            <dd id="record-category"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Event</dt>
+                                            <dd id="record-event"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Event Date</dt>
+                                            <dd id="record-event-date"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Key Contributors</dt>
+                                            <dd id="record-key-contributors"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Supersedes Badge ID</dt>
+                                            <dd id="record-supersedes"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Superseded By Badge ID</dt>
+                                            <dd id="record-superseded-by"></dd>
+                                        </div>
+                                        <div>
+                                            <dt>Last Updated</dt>
+                                            <dd id="record-updated"></dd>
+                                        </div>
+                                    </dl>
+                                </div>
+
+                                <p id="record-note" class="badge-record-note"></p>
+                            </article>
+
+                            <section class="badge-registry-table-card" aria-labelledby="badge-registry-heading">
+                                <div class="badge-registry-table-header">
+                                    <div>
+                                        <p class="badge-record-eyebrow">Public Registry</p>
+                                        <h3 id="badge-registry-heading">Badge Records</h3>
+                                    </div>
+                                    <p id="badge-table-count" class="badge-table-count"></p>
+                                </div>
+                                <p class="badge-form-help">
+                                    Use the Badge ID field and filters above to browse the registry. Direct verification links filter this table automatically.
+                                </p>
+                                <div class="badge-table-scroll" role="region" aria-label="PACIO public badge records" tabindex="0">
+                                    <table class="badge-registry-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Badge ID</th>
+                                                <th scope="col">Event</th>
+                                                <th scope="col">Event Date</th>
+                                                <th scope="col">Category</th>
+                                                <th scope="col">Company Name</th>
+                                                <th scope="col">Key Contributors</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="badge-registry-table-body"></tbody>
+                                    </table>
+                                </div>
+                                <p id="badge-table-empty" class="badge-table-empty" hidden>No public badge records match the current Badge ID filter.</p>
+                            </section>
+
+                            <div class="badge-disclaimer">
+                                <h3>Badge Meaning</h3>
+                                <p>
+                                    PACIO badges are event-based recognition artifacts. They do not include specific implementation guides tested,
+                                    detailed testing results, certification claims, conformance claims, endorsement language, or production-readiness claims.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
