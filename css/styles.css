@@ -10097,6 +10097,7 @@ img::-moz-selection {
   font-size: 0.95rem;
   color: #fff;
   letter-spacing: 0.0625em;
+  white-space: nowrap;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #f2af0d;
@@ -10155,7 +10156,7 @@ body:not(:has(header.masthead)) #mainNav:not(.navbar-shrink) {
     height: 2.5rem;
   }
   #mainNav .navbar-nav .nav-item {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;

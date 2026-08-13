@@ -79,7 +79,7 @@
   align-items: end;
   display: grid;
   gap: 0.9rem;
-  grid-template-columns: minmax(14rem, 1.5fr) minmax(8rem, 0.7fr) minmax(10rem, 1fr) minmax(12rem, 1fr) auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 1.25rem;
 }
 
@@ -111,12 +111,13 @@ select.badge-filter-control {
 }
 
 .badge-filter-actions {
+  grid-column: 1 / -1;
   min-width: 0;
   white-space: nowrap;
 }
 
 .badge-filter-actions .btn {
-  max-width: 100%;
+  white-space: nowrap;
 }
 
 .badge-id-search:disabled,
@@ -328,10 +329,6 @@ select.badge-filter-control {
 @media (max-width: 1199px) {
   .badge-filter-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .badge-filter-actions {
-    grid-column: 1 / -1;
   }
 }
 

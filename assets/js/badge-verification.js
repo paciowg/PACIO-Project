@@ -26,7 +26,7 @@
   let badgeRecords = [];
   let activeHighlightId = "";
 
-  function normalizeComparisonValue(value) {
+  function normalizeFilterValue(value) {
     return (value || "").trim().toUpperCase();
   }
 
@@ -97,7 +97,7 @@
   }
 
   function selectedFilterValue(element) {
-    return element ? normalizeComparisonValue(element.value) : "";
+    return element ? normalizeFilterValue(element.value) : "";
   }
 
   function selectedTextFilterValue(element) {
@@ -166,17 +166,17 @@
   }
 
   function renderRegistryTable(filterValue, highlightValue) {
-    const filter = extractBadgeId(filterValue) || normalizeComparisonValue(filterValue);
-    const highlight = normalizeComparisonValue(highlightValue);
+    const filter = extractBadgeId(filterValue) || normalizeFilterValue(filterValue);
+    const highlight = normalizeFilterValue(highlightValue);
     const selectedEvent = selectedFilterValue(eventFilter);
     const selectedYear = selectedFilterValue(yearFilter);
     const selectedCategory = selectedFilterValue(categoryFilter);
     const selectedCompany = selectedTextFilterValue(companyFilter);
     const rows = badgeRecords.filter(function (item) {
-      const badgeId = normalizeComparisonValue(item.badgeId);
-      const itemEvent = normalizeComparisonValue(item.eventId);
-      const itemCategory = normalizeComparisonValue(item.badgeCategory);
-      const itemYear = normalizeComparisonValue(recordYear(item));
+      const badgeId = normalizeFilterValue(item.badgeId);
+      const itemEvent = normalizeFilterValue(item.eventId);
+      const itemCategory = normalizeFilterValue(item.badgeCategory);
+      const itemYear = normalizeFilterValue(recordYear(item));
       const itemCompany = companyName(item).toLowerCase();
       return (!filter || badgeId.indexOf(filter) !== -1) &&
         (!selectedEvent || itemEvent === selectedEvent) &&
@@ -188,7 +188,7 @@
     tableBody.textContent = "";
     rows.forEach(function (item) {
       const row = document.createElement("tr");
-      if (highlight && normalizeComparisonValue(item.badgeId) === highlight) {
+      if (highlight && normalizeFilterValue(item.badgeId) === highlight) {
         row.className = "badge-row-highlight";
         row.setAttribute("aria-current", "true");
       }
@@ -250,9 +250,9 @@
   }
 
   function setSelectValue(select, value) {
-    const normalizedValue = normalizeComparisonValue(value);
+    const normalizedValue = normalizeFilterValue(value);
     const option = Array.prototype.find.call(select.options, function (item) {
-      return normalizeComparisonValue(item.value) === normalizedValue;
+      return normalizeFilterValue(item.value) === normalizedValue;
     });
     select.value = option ? option.value : "";
   }
@@ -272,7 +272,7 @@
   }
 
   function verifyBadgeId(rawBadgeId, updateUrl) {
-    const badgeId = extractBadgeId(rawBadgeId) || normalizeComparisonValue(rawBadgeId);
+    const badgeId = extractBadgeId(rawBadgeId) || normalizeFilterValue(rawBadgeId);
     resetRecord();
 
     if (!badgeId) {
@@ -289,7 +289,7 @@
     }
 
     const match = badgeRecords.find(function (item) {
-      return normalizeComparisonValue(item.badgeId) === badgeId;
+      return normalizeFilterValue(item.badgeId) === badgeId;
     });
 
     if (!match) {
