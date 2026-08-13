@@ -26,7 +26,7 @@
   let badgeRecords = [];
   let activeHighlightId = "";
 
-  function normalizeBadgeId(value) {
+  function normalizeComparisonValue(value) {
     return (value || "").trim().toUpperCase();
   }
 
@@ -97,7 +97,7 @@
   }
 
   function selectedFilterValue(element) {
-    return element ? normalizeBadgeId(element.value) : "";
+    return element ? normalizeComparisonValue(element.value) : "";
   }
 
   function selectedTextFilterValue(element) {
@@ -166,17 +166,17 @@
   }
 
   function renderRegistryTable(filterValue, highlightValue) {
-    const filter = extractBadgeId(filterValue) || normalizeBadgeId(filterValue);
-    const highlight = normalizeBadgeId(highlightValue);
+    const filter = extractBadgeId(filterValue) || normalizeComparisonValue(filterValue);
+    const highlight = normalizeComparisonValue(highlightValue);
     const selectedEvent = selectedFilterValue(eventFilter);
     const selectedYear = selectedFilterValue(yearFilter);
     const selectedCategory = selectedFilterValue(categoryFilter);
     const selectedCompany = selectedTextFilterValue(companyFilter);
     const rows = badgeRecords.filter(function (item) {
-      const badgeId = normalizeBadgeId(item.badgeId);
-      const itemEvent = normalizeBadgeId(item.eventId);
-      const itemCategory = normalizeBadgeId(item.badgeCategory);
-      const itemYear = normalizeBadgeId(recordYear(item));
+      const badgeId = normalizeComparisonValue(item.badgeId);
+      const itemEvent = normalizeComparisonValue(item.eventId);
+      const itemCategory = normalizeComparisonValue(item.badgeCategory);
+      const itemYear = normalizeComparisonValue(recordYear(item));
       const itemCompany = companyName(item).toLowerCase();
       return (!filter || badgeId.indexOf(filter) !== -1) &&
         (!selectedEvent || itemEvent === selectedEvent) &&
@@ -188,7 +188,7 @@
     tableBody.textContent = "";
     rows.forEach(function (item) {
       const row = document.createElement("tr");
-      if (highlight && normalizeBadgeId(item.badgeId) === highlight) {
+      if (highlight && normalizeComparisonValue(item.badgeId) === highlight) {
         row.className = "badge-row-highlight";
         row.setAttribute("aria-current", "true");
       }
@@ -250,9 +250,9 @@
   }
 
   function setSelectValue(select, value) {
-    const normalizedValue = normalizeBadgeId(value);
+    const normalizedValue = normalizeComparisonValue(value);
     const option = Array.prototype.find.call(select.options, function (item) {
-      return normalizeBadgeId(item.value) === normalizedValue;
+      return normalizeComparisonValue(item.value) === normalizedValue;
     });
     select.value = option ? option.value : "";
   }
@@ -272,7 +272,7 @@
   }
 
   function verifyBadgeId(rawBadgeId, updateUrl) {
-    const badgeId = extractBadgeId(rawBadgeId) || normalizeBadgeId(rawBadgeId);
+    const badgeId = extractBadgeId(rawBadgeId) || normalizeComparisonValue(rawBadgeId);
     resetRecord();
 
     if (!badgeId) {
@@ -289,7 +289,7 @@
     }
 
     const match = badgeRecords.find(function (item) {
-      return normalizeBadgeId(item.badgeId) === badgeId;
+      return normalizeComparisonValue(item.badgeId) === badgeId;
     });
 
     if (!match) {

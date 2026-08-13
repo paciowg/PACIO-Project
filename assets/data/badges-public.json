@@ -22,7 +22,7 @@
     "companyName": "Patient Centric Solutions",
     "badgeCategory": "FHIR Implementer",
     "eventName": "CMS Connectathon",
-    "eventDateRange": "2025-07-01",
+    "eventDateRange": "July 2025",
     "verificationUrl": "https://pacioproject.org/verification/?id=PACIO-BDG-2025-0002",
     "lastUpdated": "2026-08-05"
   },
@@ -30,14 +30,14 @@
     "badgeId": "PACIO-BDG-2026-0001",
     "eventId": "2026-07-cms-connectathon",
     "status": "Active",
-    "recipientDisplayName": "Matrix Care",
+    "recipientDisplayName": "MatrixCare",
     "recipientType": "Organization",
-    "companyName": "Matrix Care",
+    "companyName": "MatrixCare",
     "badgeCategory": "FHIR Implementer",
     "eventName": "CMS Connectathon",
     "eventDateRange": "July 2026",
     "verificationUrl": "https://pacioproject.org/verification/?id=PACIO-BDG-2026-0001",
-    "lastUpdated": "2026-08-05"
+    "lastUpdated": "2026-08-10"
   },
   {
     "badgeId": "PACIO-BDG-2026-0002",

@@ -39,6 +39,7 @@ BADGE_ID_PATTERN = re.compile(r"^PACIO-BDG-\d{4}-\d{4}$")
 EVENT_ID_PATTERN = re.compile(r"^20\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*$")
 DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 EMAIL_PATTERN = re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}")
+PHONE_PATTERN = re.compile(r"(?<![A-Za-z0-9-])(?:\+?1[-. ]?)?(?:\(\d{3}\)|\d{3})[-. ]\d{3}[-. ]\d{4}(?![A-Za-z0-9-])")
 PROHIBITED_PUBLIC_FIELDS = {
     "email",
     "phone",
@@ -100,6 +101,16 @@ def validate_public_text(record: dict, index: int) -> None:
             fail(f"Record {index}: prohibited claim language found: {phrase}")
 
 
+def validate_sensitive_public_text(record: dict, index: int) -> None:
+    for field, value in record.items():
+        if not isinstance(value, str):
+            continue
+        if EMAIL_PATTERN.search(value):
+            fail(f"Record {index}: {field} must not include email addresses.")
+        if PHONE_PATTERN.search(value):
+            fail(f"Record {index}: {field} must not include phone numbers.")
+
+
 def validate_record(record: object, index: int, seen_ids: set[str]) -> None:
     if not isinstance(record, dict):
         fail(f"Record {index}: each registry item must be an object.")
@@ -149,12 +160,9 @@ def validate_record(record: object, index: int, seen_ids: set[str]) -> None:
     for field in OPTIONAL_FIELDS:
         if field in record and not isinstance(record[field], str):
             fail(f"Record {index}: {field} must be a string when provided.")
-    for field in ("companyName", "keyContributors"):
-        if EMAIL_PATTERN.search(str(record.get(field, ""))):
-            fail(f"Record {index}: {field} must not include email addresses.")
-
     validate_url(record, index)
     validate_public_text(record, index)
+    validate_sensitive_public_text(record, index)
 
 
 def main() -> None:
